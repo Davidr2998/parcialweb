@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap");
+
+html {
+  height: 100%;
+}
+
+/* instanciando el fondo del body, tomando en cuenta la compatibilidad con todos los navegadores */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  background: rgb(32, 1, 34);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(32, 1, 34, 1) 0%,
+    rgba(111, 0, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(32, 1, 34, 1) 0%,
+    rgba(111, 0, 0, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(32, 1, 34, 1) 0%,
+    rgba(111, 0, 0, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#200122",endColorstr="#6f0000",GradientType=1);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /*Se da un color blanco al titulo RESULTADOS
+  y un fontsize de 2.5 rem*/
+  .o-results {
+    color: white;
+    font-size: 2.5rem;
+    font-family: "Montserrat";
+  }
+
+  /* Dando flex para poder centrar el titulo RESULTADOS y las cards */
+  .o-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* Se dan estilos a la card, se utiliza flex para poder organizar todo su contenido
+en columna y poder centrar todo. */
+  .o-child-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 85%;
+    padding: 0.5rem;
+    margin: 1rem;
+    border: 1px solid #b1b1b1;
+    border-radius: 15px;
+    background-color: #eeeeee;
+    font-family: sans-serif;
+  }
+
+  /* Se ajustan las cards dentro de .o-cards-container para poder darles orden y que no se desborden al reajustar
+la pantalla */
+  .o-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  /* Se da un ancho del 100% para la imagen de la card */
+  img {
+    width: 100%;
+  }
+
+  /* Se instancia el tamaño de la fuente de letra para el titulo de la card,
+el cual es el nombre del heroe */
+  .o-title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  /* Se justifica el texto para que la estetica sea mejor y se da una fuente
+de letra de 0.8 rem para el parrafo de la card */
+  p {
+    text-align: justify;
+    font-size: 1.2rem;
+  }
+
+  /* Iniciando estilos de botón */
+  .o-button {
+    width: 8rem;
+    height: 3rem;
+    background: linear-gradient(
+      180deg,
+      rgba(229, 45, 39, 1) 0%,
+      rgba(179, 18, 23, 1) 100%
+    );
+    color: white;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: italic;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .o-button:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(167, 55, 55, 1) 0%,
+      rgba(122, 40, 40, 1) 100%
+    );
+  }
+  /* Finalizando estilos de botón */
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  /*Se da un color blanco al titulo RESULTADOS*/
+  .o-results {
+    color: white;
+    font-size: 2.5rem;
+    font-family: "Montserrat";
+  }
+
+  /* Dando flex para poder centrar el titulo RESULTADOS y las cards */
+  .o-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* Se dan estilos a la card, se utiliza flex para poder organizar todo su contenido
+en columna y poder centrar todo. */
+  .o-child-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 75%;
+    padding: 0.5rem;
+    margin: 1rem;
+    border: 1px solid #b1b1b1;
+    border-radius: 15px;
+    background-color: #eeeeee;
+    font-family: sans-serif;
+  }
+
+  /* Se ajustan las cards dentro de .o-cards-container para poder darles orden y que no se desborden al reajustar
+la pantalla */
+  .o-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  /* Se da un ancho del 100% para la imagen de la card */
+  img {
+    width: 100%;
+  }
+
+  /* Se instancia el tamaño de la fuente de letra para el titulo de la card,
+el cual es el nombre del heroe */
+  .o-title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  /* Se justifica el texto para que la estetica sea mejor y se da una fuente
+de letra de 0.8 rem para el parrafo de la card */
+  p {
+    text-align: justify;
+    font-size: 1.2rem;
+  }
+
+  /* Iniciando estilos de botón */
+  .o-button {
+    width: 8rem;
+    height: 3rem;
+    background: linear-gradient(
+      180deg,
+      rgba(229, 45, 39, 1) 0%,
+      rgba(179, 18, 23, 1) 100%
+    );
+    color: white;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: italic;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .o-button:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(167, 55, 55, 1) 0%,
+      rgba(122, 40, 40, 1) 100%
+    );
+  }
+  /* Finalizando estilos de botón */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /*Se da un color blanco al titulo RESULTADOS*/
+  .o-results {
+    color: white;
+    font-size: 3rem;
+    font-family: "Montserrat";
+  }
+
+  /* Dando flex para poder centrar el titulo RESULTADOS y las cards */
+  .o-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* Se dan estilos a la card, se utiliza flex para poder organizar todo su contenido
+en columna y poder centrar todo. */
+  .o-child-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 65%;
+    padding: 0.5rem;
+    margin: 1rem;
+    border: 1px solid #b1b1b1;
+    border-radius: 15px;
+    background-color: #eeeeee;
+    font-family: sans-serif;
+  }
+
+  /* Se ajustan las cards dentro de .o-cards-container para poder darles orden y que no se desborden al reajustar
+la pantalla */
+  .o-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  /* Se da un ancho del 100% para la imagen de la card */
+  img {
+    width: 100%;
+  }
+
+  /* Se instancia el tamaño de la fuente de letra para el titulo de la card,
+el cual es el nombre del heroe */
+  .o-title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  /* Se justifica el texto para que la estetica sea mejor y se da una fuente
+de letra de 0.8 rem para el parrafo de la card */
+  p {
+    text-align: justify;
+    font-size: 1.2rem;
+  }
+
+  /* Iniciando estilos de botón */
+  .o-button {
+    width: 8rem;
+    height: 3rem;
+    background: linear-gradient(
+      180deg,
+      rgba(229, 45, 39, 1) 0%,
+      rgba(179, 18, 23, 1) 100%
+    );
+    color: white;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: italic;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .o-button:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(167, 55, 55, 1) 0%,
+      rgba(122, 40, 40, 1) 100%
+    );
+  }
+  /* Finalizando estilos de botón */
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  /*Se da un color blanco al titulo RESULTADOS*/
+  .o-results {
+    color: white;
+    font-size: 3rem;
+    font-family: "Montserrat";
+  }
+
+  /* Dando flex para poder centrar el titulo RESULTADOS y las cards */
+  .o-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* Se dan estilos a la card, se utiliza flex para poder organizar todo su contenido
+en columna y poder centrar todo. */
+  .o-child-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 25%;
+    padding: 0.5rem;
+    margin: 1rem;
+    border: 1px solid #b1b1b1;
+    border-radius: 15px;
+    background-color: #eeeeee;
+    font-family: sans-serif;
+  }
+
+  /* Se ajustan las cards dentro de .o-cards-container para poder darles orden y que no se desborden al reajustar
+la pantalla */
+  .o-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  /* Se da un ancho del 100% para la imagen de la card */
+  img {
+    width: 100%;
+  }
+
+  /* Se instancia el tamaño de la fuente de letra para el titulo de la card,
+el cual es el nombre del heroe */
+  .o-title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  /* Se justifica el texto para que la estetica sea mejor y se da una fuente
+de letra de 0.8 rem para el parrafo de la card */
+  p {
+    text-align: justify;
+    font-size: 1rem;
+  }
+
+  /* Iniciando estilos de botón */
+  .o-button {
+    width: 8rem;
+    height: 3rem;
+    background: linear-gradient(
+      180deg,
+      rgba(229, 45, 39, 1) 0%,
+      rgba(179, 18, 23, 1) 100%
+    );
+    color: white;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: italic;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .o-button:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(167, 55, 55, 1) 0%,
+      rgba(122, 40, 40, 1) 100%
+    );
+  }
+  /* Finalizando estilos de botón */
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  /*Se da un color blanco al titulo RESULTADOS*/
+  .o-results {
+    color: white;
+    font-size: 3rem;
+    font-family: "Montserrat";
+  }
+
+  /* Dando flex para poder centrar el titulo RESULTADOS y las cards */
+  .o-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* Se dan estilos a la card, se utiliza flex para poder organizar todo su contenido
+en columna y poder centrar todo. */
+  .o-child-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 30%;
+    padding: 0.5rem;
+    margin: 1rem;
+    border: 1px solid #b1b1b1;
+    border-radius: 15px;
+    background-color: #eeeeee;
+    font-family: sans-serif;
+  }
+
+  /* Se ajustan las cards dentro de .o-cards-container para poder darles orden y que no se desborden al reajustar
+la pantalla */
+  .o-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  /* Se da un ancho del 100% para la imagen de la card */
+  img {
+    width: 100%;
+  }
+
+  /* Se instancia el tamaño de la fuente de letra para el titulo de la card,
+el cual es el nombre del heroe */
+  .o-title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  /* Se justifica el texto para que la estetica sea mejor y se da una fuente
+de letra de 0.8 rem para el parrafo de la card */
+  p {
+    text-align: justify;
+    font-size: 1rem;
+  }
+
+  /* Iniciando estilos de botón */
+  .o-button {
+    width: 8rem;
+    height: 3rem;
+    background: linear-gradient(
+      180deg,
+      rgba(229, 45, 39, 1) 0%,
+      rgba(179, 18, 23, 1) 100%
+    );
+    color: white;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: italic;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+  }
+
+  .o-button:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(167, 55, 55, 1) 0%,
+      rgba(122, 40, 40, 1) 100%
+    );
+  }
+  /* Finalizando estilos de botón */
+}

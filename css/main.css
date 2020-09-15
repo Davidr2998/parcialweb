@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+
+  background: rgb(32, 1, 34);
+  background: linear-gradient(
+    180deg,
+    rgba(32, 1, 34, 1) 0%,
+    rgba(111, 0, 0, 1) 100%
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
+}
+
+header h3 {
+  color: white;
+  margin-left: 20px;
+}
+
+header img {
+  width: 10rem;
+}
+
+.o-main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.o-panel-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.o-app-container {
+  display: flex;
+  flex-wrap: wrap;
+  background: #eeeeee;
+  margin: 0 0 0 100px;
+  width: 35%;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
+}
+
+.o-app-title {
+  width: 100%;
+  font-size: 4rem;
+  font-weight: bold;
+  font-style: italic;
+  margin: 0;
+}
+
+.o-app-description {
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.o-action-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.o-button {
+  width: 8rem;
+  height: 3rem;
+  margin: 2rem 0 0 0;
+  background: linear-gradient(
+    180deg,
+    rgba(229, 45, 39, 1) 0%,
+    rgba(179, 18, 23, 1) 100%
+  );
+  color: white;
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 1rem;
+  font-style: italic;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  outline: none;
+}
+
+.o-button:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(167, 55, 55, 1) 0%,
+    rgba(122, 40, 40, 1) 100%
+  );
+}
+
+.o-textfield {
+  width: 20%;
+  height: 2.5rem;
+  padding: 0 3rem;
+  margin: 20px 0 20px 0;
+  outline: none;
+  border: 2px solid red;
+  border-radius: 25px;
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-style: italic;
+  transition: all 0.2s ease-in-out;
+}
+
+.o-textfield:focus {
+  border: 2px solid black;
+  transition: all 0.4s ease-in-out;
+}
+
+.o-right-container {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  height: 85%;
+  margin-right: 5rem;
+}
+
+.o-right-container img {
+  max-width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1023px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    margin-bottom: 2px;
+  }
+
+  header img {
+    width: 7rem;
+    height: 3rem;
+  }
+
+  .o-panel-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .o-app-container {
+    width: 80%;
+    margin: 0;
+    padding: 30px;
+  }
+
+  .o-app-title {
+    font-size: 2rem;
+  }
+
+  .o-right-container {
+    display: none;
+  }
+
+  .o-textfield {
+    width: 40%;
+    text-align: center;
+    margin: 0;
+  }
+}
