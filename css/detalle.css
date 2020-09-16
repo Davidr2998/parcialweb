@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap");
+
+html {
+  height: 100%;
+}
+
+/* instanciando el fondo del body, tomando en cuenta la compatibilidad con todos los navegadores */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  background: rgb(32, 1, 34);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(32, 1, 34, 1) 0%,
+    rgba(111, 0, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(32, 1, 34, 1) 0%,
+    rgba(111, 0, 0, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(32, 1, 34, 1) 0%,
+    rgba(111, 0, 0, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#200122",endColorstr="#6f0000",GradientType=1);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* Definiendo los estilos del contenedor principal
+  centrar el .o-hero-container en la mitad de la pantalla */
+  .o-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Definiendo estilos del hero container
+  se utiliza flex direction column para poder organizar
+  la informacion de arriba a abajo */
+  .o-hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 2rem 0 1rem 0;
+    border-radius: 1rem;
+    background: #eeeeee;
+    padding: 5px 10px 5px 10px;
+  }
+
+  /* Estilos del nombre del heroe */
+  .o-hero-name {
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+
+  /* Estilos de la imagen del heroe */
+  .o-hero-image {
+    width: 80%;
+    border-radius: 1rem;
+  }
+
+  /* Estilos de la descripcion del heroe */
+  .o-hero-description {
+    text-align: justify;
+  }
+
+  /* Estilos del contenedor de comics, se utiliza flex direction
+  para que haya una mejor visualizacion en dispositivos de pantalla
+  pequeña */
+  .o-hero-comics {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /* Estilos del titulo que dice: Comics */
+  .o-comic-title {
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+  }
+
+  /* Estilos de cada comic contenido en el contenedor de comics */
+  .o-comic {
+    width: 60%;
+    margin: 0 0 0.8rem 0;
+    border-radius: 1rem;
+    border: 2px solid #212121;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  /* Definiendo los estilos del contenedor principal
+  centrar el .o-hero-container en la mitad de la pantalla */
+  .o-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Definiendo estilos del hero container
+  se utiliza flex direction column para poder organizar
+  la informacion de arriba a abajo */
+  .o-hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 2rem 0 1rem 0;
+    border-radius: 1rem;
+    background: #eeeeee;
+    padding: 5px 10px 5px 10px;
+  }
+
+  /* Estilos del nombre del heroe */
+  .o-hero-name {
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+
+  /* Estilos de la imagen del heroe */
+  .o-hero-image {
+    width: 80%;
+    border-radius: 1rem;
+  }
+
+  /* Estilos de la descripcion del heroe */
+  .o-hero-description {
+    text-align: justify;
+    font-size: 1.5rem;
+  }
+
+  /* Estilos del contenedor de comics, se utiliza flex direction
+  para que haya una mejor visualizacion en dispositivos de pantalla
+  pequeña */
+  .o-hero-comics {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /* Estilos del titulo que dice: Comics */
+  .o-comic-title {
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+  }
+
+  /* Estilos de cada comic contenido en el contenedor de comics */
+  .o-comic {
+    width: 60%;
+    margin: 0 0 0.8rem 0;
+    border-radius: 1rem;
+    border: 2px solid #212121;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /* Definiendo los estilos del contenedor principal
+  centrar el .o-hero-container en la mitad de la pantalla */
+  .o-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Definiendo estilos del hero container
+  se utiliza flex direction column para poder organizar
+  la informacion de arriba a abajo */
+  .o-hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 2rem 0 1rem 0;
+    border-radius: 1rem;
+    background: #eeeeee;
+    padding: 5px 40px;
+  }
+
+  /* Estilos del nombre del heroe */
+  .o-hero-name {
+    font-size: 2.5rem;
+    font-style: italic;
+  }
+
+  /* Estilos de la imagen del heroe */
+  .o-hero-image {
+    width: 80%;
+    border-radius: 1rem;
+  }
+
+  /* Estilos de la descripcion del heroe */
+  .o-hero-description {
+    text-align: justify;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  /* Estilos del contenedor de comics, se utiliza flex direction
+  para que haya una mejor visualizacion en dispositivos de pantalla
+  pequeña */
+  .o-hero-comics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /* Estilos del titulo que dice: Comics */
+  .o-comic-title {
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+  }
+
+  /* Estilos de cada comic contenido en el contenedor de comics */
+  .o-comic {
+    width: 45%;
+    margin: 0 0 0.8rem 0;
+    border-radius: 1rem;
+    border: 2px solid #212121;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  /* Definiendo los estilos del contenedor principal
+  centrar el .o-hero-container en la mitad de la pantalla */
+  .o-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Definiendo estilos del hero container
+  se utiliza flex direction column para poder organizar
+  la informacion de arriba a abajo */
+  .o-hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 2rem 0 1rem 0;
+    border-radius: 1rem;
+    background: #eeeeee;
+    padding: 5px 40px;
+  }
+
+  /* Estilos del nombre del heroe */
+  .o-hero-name {
+    font-size: 2.5rem;
+    font-style: italic;
+  }
+
+  /* Estilos de la imagen del heroe */
+  .o-hero-image {
+    width: 60%;
+    border-radius: 1rem;
+  }
+
+  /* Estilos de la descripcion del heroe */
+  .o-hero-description {
+    text-align: justify;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  /* Estilos del contenedor de comics, se utiliza flex direction
+  para que haya una mejor visualizacion en dispositivos de pantalla
+  pequeña */
+  .o-hero-comics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /* Estilos del titulo que dice: Comics */
+  .o-comic-title {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+  }
+
+  /* Estilos de cada comic contenido en el contenedor de comics */
+  .o-comic {
+    width: 25%;
+    margin: 0 0 0.8rem 0;
+    border-radius: 1rem;
+    border: 2px solid #212121;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  /* Definiendo los estilos del contenedor principal
+  centrar el .o-hero-container en la mitad de la pantalla */
+  .o-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Definiendo estilos del hero container
+  se utiliza flex direction column para poder organizar
+  la informacion de arriba a abajo */
+  .o-hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 2rem 0 1rem 0;
+    border-radius: 1rem;
+    background: #eeeeee;
+    padding: 5px 40px;
+  }
+
+  /* Estilos del nombre del heroe */
+  .o-hero-name {
+    font-size: 2.5rem;
+    font-style: italic;
+  }
+
+  /* Estilos de la imagen del heroe */
+  .o-hero-image {
+    width: 30%;
+    border-radius: 1rem;
+  }
+
+  /* Estilos de la descripcion del heroe */
+  .o-hero-description {
+    text-align: justify;
+    width: 70%;
+    font-size: 1.2rem;
+  }
+
+  /* Estilos del contenedor de comics, se utiliza flex direction
+  para que haya una mejor visualizacion en dispositivos de pantalla
+  pequeña */
+  .o-hero-comics {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Estilos del titulo que dice: Comics */
+  .o-comic-title {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+  }
+
+  /* Estilos de cada comic contenido en el contenedor de comics */
+  .o-comic {
+    width: 15%;
+    margin: 0.8rem 1.5rem;
+    border-radius: 1rem;
+    border: 2px solid #212121;
+  }
+}

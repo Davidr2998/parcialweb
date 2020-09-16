@@ -329,7 +329,7 @@ en columna y poder centrar todo. */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 25%;
+    max-width: 35%;
     padding: 0.5rem;
     margin: 1rem;
     border: 1px solid #b1b1b1;
@@ -363,7 +363,7 @@ el cual es el nombre del heroe */
 de letra de 0.8 rem para el parrafo de la card */
   p {
     text-align: justify;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   /* Iniciando estilos de botón */

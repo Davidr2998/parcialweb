@@ -1,180 +1,849 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap");
 
+/* instanciando el fondo del body, tomando en cuenta la compatibilidad con todos los navegadores */
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-
   background: rgb(32, 1, 34);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(32, 1, 34, 1) 0%,
+    rgba(111, 0, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(32, 1, 34, 1) 0%,
+    rgba(111, 0, 0, 1) 100%
+  );
   background: linear-gradient(
     180deg,
     rgba(32, 1, 34, 1) 0%,
     rgba(111, 0, 0, 1) 100%
   );
-  background-position: center;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#200122",endColorstr="#6f0000",GradientType=1);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-attachment: fixed;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  padding: 1.2rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
-}
-
-header h3 {
-  color: white;
-  margin-left: 20px;
-}
-
-header img {
-  width: 10rem;
-}
-
-.o-main-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-}
-
-.o-panel-container {
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.o-app-container {
-  display: flex;
-  flex-wrap: wrap;
-  background: #eeeeee;
-  margin: 0 0 0 100px;
-  width: 35%;
-  padding: 2rem;
-  border-radius: 2rem;
-  box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
-}
-
-.o-app-title {
-  width: 100%;
-  font-size: 4rem;
-  font-weight: bold;
-  font-style: italic;
-  margin: 0;
-}
-
-.o-app-description {
-  text-align: justify;
-  font-size: 1.2rem;
-}
-
-.o-action-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.o-button {
-  width: 8rem;
-  height: 3rem;
-  margin: 2rem 0 0 0;
-  background: linear-gradient(
-    180deg,
-    rgba(229, 45, 39, 1) 0%,
-    rgba(179, 18, 23, 1) 100%
-  );
-  color: white;
-  font-family: "Montserrat";
-  font-weight: bold;
-  font-size: 1rem;
-  font-style: italic;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  outline: none;
-}
-
-.o-button:hover {
-  background: linear-gradient(
-    180deg,
-    rgba(167, 55, 55, 1) 0%,
-    rgba(122, 40, 40, 1) 100%
-  );
-}
-
-.o-textfield {
-  width: 20%;
-  height: 2.5rem;
-  padding: 0 3rem;
-  margin: 20px 0 20px 0;
-  outline: none;
-  border: 2px solid red;
-  border-radius: 25px;
-  font-family: "Montserrat";
-  font-weight: bold;
-  font-style: italic;
-  transition: all 0.2s ease-in-out;
-}
-
-.o-textfield:focus {
-  border: 2px solid black;
-  transition: all 0.4s ease-in-out;
-}
-
-.o-right-container {
-  display: flex;
-  justify-content: center;
-  width: 40%;
-  height: 85%;
-  margin-right: 5rem;
-}
-
-.o-right-container img {
-  max-width: 100%;
-  height: 100%;
-}
-
-@media (max-width: 1023px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* Inicializando los estilos del header
+  Utilizando display flex para centrar el logo y el slogan */
   header {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 2px;
-    margin-bottom: 2px;
+    padding: 0.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
   }
 
+  /* Estilos del titulo "Tu buscador de heroes" */
+  header h3 {
+    color: white;
+    margin-left: 20px;
+    font-size: 1rem;
+  }
+
+  /* Estilos del logo del header */
   header img {
-    width: 7rem;
-    height: 3rem;
+    width: 8rem;
   }
 
+  /* Estilos del contenedor principal, se utiliza display flex y
+  un flex direction column para organizar el header y el contenido*/
+  .o-main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* Estilos del contenedor que contiene la card */
   .o-panel-container {
     display: flex;
+    height: 100vh;
+    align-items: center;
     justify-content: center;
   }
 
+  /* Estilos de la card */
   .o-app-container {
-    width: 80%;
-    margin: 0;
-    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #eeeeee;
+    width: 65%;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
   }
 
+  /* Estilos del titulo de la card */
   .o-app-title {
-    font-size: 2rem;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
   }
 
+  /* Estilos de la descripcion que se encuentra en la card */
+  .o-app-description {
+    text-align: justify;
+    font-size: 1rem;
+  }
+
+  /* Se crea un contenedor para poder organizar el textfield y el button */
+  .o-action-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Iniciando estilos del boton */
+  .o-button {
+    width: 8rem;
+    height: 4rem;
+    background: linear-gradient(
+      180deg,
+      rgba(229, 45, 39, 1) 0%,
+      rgba(179, 18, 23, 1) 100%
+    );
+    color: white;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-style: italic;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .o-button:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(167, 55, 55, 1) 0%,
+      rgba(122, 40, 40, 1) 100%
+    );
+  }
+  /* Finalizando estilos del boton */
+
+  /* Iniciando estilos del textfield */
+  .o-textfield {
+    width: 40%;
+    height: 2.5rem;
+    padding: 0 3rem;
+    margin: 20px 0 20px 0;
+    outline: none;
+    border: 2px solid red;
+    border-radius: 25px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-style: italic;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .o-textfield:focus {
+    border: 2px solid black;
+    transition: all 0.4s ease-in-out;
+  }
+  /* Finalizando estilos del textfield */
+
+  /* Estilos del contenedor de la derecha, este contenedor es el que
+  tiene la imagen que se mueve */
   .o-right-container {
     display: none;
   }
+}
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  /* Inicializando los estilos del header
+  Utilizando display flex para centrar el logo y el slogan */
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
+  }
+
+  /* Estilos del titulo "Tu buscador de heroes" */
+  header h3 {
+    color: white;
+    margin-left: 20px;
+    font-size: 1.3rem;
+  }
+
+  /* Estilos del logo del header */
+  header img {
+    width: 10rem;
+  }
+
+  /* Estilos del contenedor principal, se utiliza display flex y
+  un flex direction column para organizar el header y el contenido*/
+  .o-main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* Estilos del contenedor que contiene la card */
+  .o-panel-container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Estilos de la card */
+  .o-app-container {
+    display: flex;
+    flex-wrap: wrap;
+    background: #eeeeee;
+    width: 65%;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
+  }
+
+  /* Estilos del titulo de la card */
+  .o-app-title {
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* Estilos de la descripcion que se encuentra en la card */
+  .o-app-description {
+    text-align: justify;
+    font-size: 1rem;
+  }
+
+  /* Se crea un contenedor para poder organizar el textfield y el button */
+  .o-action-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Iniciando estilos del boton */
+  .o-button {
+    width: 8rem;
+    height: 4rem;
+    margin: 2rem 0 0 0;
+    background: linear-gradient(
+      180deg,
+      rgba(229, 45, 39, 1) 0%,
+      rgba(179, 18, 23, 1) 100%
+    );
+    color: white;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-style: italic;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .o-button:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(167, 55, 55, 1) 0%,
+      rgba(122, 40, 40, 1) 100%
+    );
+  }
+  /* Finalizando estilos del boton */
+
+  /* Iniciando estilos del textfield */
   .o-textfield {
     width: 40%;
-    text-align: center;
+    height: 2.5rem;
+    padding: 0 3rem;
+    margin: 20px 0 20px 0;
+    outline: none;
+    border: 2px solid red;
+    border-radius: 25px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-style: italic;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .o-textfield:focus {
+    border: 2px solid black;
+    transition: all 0.4s ease-in-out;
+  }
+  /* Finalizando estilos del textfield */
+
+  /* Estilos del contenedor de la derecha, este contenedor es el que
+  tiene la imagen que se mueve */
+  .o-right-container {
+    display: none;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /* Inicializando los estilos del header
+  Utilizando display flex para centrar el logo y el slogan */
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
+  }
+
+  /* Estilos del titulo "Tu buscador de heroes" */
+  header h3 {
+    color: white;
+    margin-left: 20px;
+    font-size: 1.5rem;
+  }
+
+  /* Estilos del logo del header */
+  header img {
+    width: 10rem;
+  }
+
+  /* Estilos del contenedor principal, se utiliza display flex y
+  un flex direction column para organizar el header y el contenido*/
+  .o-main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* Estilos del contenedor que contiene la card */
+  .o-panel-container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Estilos de la card */
+  .o-app-container {
+    display: flex;
+    flex-wrap: wrap;
+    background: #eeeeee;
+    width: 65%;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
+  }
+
+  /* Estilos del titulo de la card */
+  .o-app-title {
+    width: 100%;
+    font-size: 4rem;
+    font-weight: bold;
+    font-style: italic;
     margin: 0;
+  }
+
+  /* Estilos de la descripcion que se encuentra en la card */
+  .o-app-description {
+    text-align: justify;
+    font-size: 1.7rem;
+  }
+
+  /* Se crea un contenedor para poder organizar el textfield y el button */
+  .o-action-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Iniciando estilos del boton */
+  .o-button {
+    width: 8rem;
+    height: 4rem;
+    margin: 2rem 0 0 0;
+    background: linear-gradient(
+      180deg,
+      rgba(229, 45, 39, 1) 0%,
+      rgba(179, 18, 23, 1) 100%
+    );
+    color: white;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-style: italic;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .o-button:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(167, 55, 55, 1) 0%,
+      rgba(122, 40, 40, 1) 100%
+    );
+  }
+  /* Finalizando estilos del boton */
+
+  /* Iniciando estilos del textfield */
+  .o-textfield {
+    width: 40%;
+    height: 2.5rem;
+    padding: 0 3rem;
+    margin: 20px 0 20px 0;
+    outline: none;
+    border: 2px solid red;
+    border-radius: 25px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-style: italic;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .o-textfield:focus {
+    border: 2px solid black;
+    transition: all 0.4s ease-in-out;
+  }
+  /* Finalizando estilos del textfield */
+
+  /* Estilos del contenedor de la derecha, este contenedor es el que
+  tiene la imagen que se mueve */
+  .o-right-container {
+    display: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  /* Inicializando los estilos del header
+  Utilizando display flex para centrar el logo y el slogan */
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
+  }
+
+  /* Estilos del titulo "Tu buscador de heroes" */
+  header h3 {
+    color: white;
+    margin-left: 20px;
+    font-size: 1.5rem;
+  }
+
+  /* Estilos del logo del header */
+  header img {
+    width: 10rem;
+  }
+
+  /* Estilos del contenedor principal, se utiliza display flex y
+  un flex direction column para organizar el header y el contenido*/
+  .o-main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* Estilos del contenedor que contiene la card */
+  .o-panel-container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Estilos de la card */
+  .o-app-container {
+    display: flex;
+    flex-wrap: wrap;
+    background: #eeeeee;
+    width: 45%;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
+  }
+
+  /* Estilos del titulo de la card */
+  .o-app-title {
+    width: 100%;
+    font-size: 4rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* Estilos de la descripcion que se encuentra en la card */
+  .o-app-description {
+    text-align: justify;
+    font-size: 1.7rem;
+  }
+
+  /* Se crea un contenedor para poder organizar el textfield y el button */
+  .o-action-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Iniciando estilos del boton */
+  .o-button {
+    width: 8rem;
+    height: 4rem;
+    margin: 3rem 0 0 0;
+    background: linear-gradient(
+      180deg,
+      rgba(229, 45, 39, 1) 0%,
+      rgba(179, 18, 23, 1) 100%
+    );
+    color: white;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: italic;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .o-button:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(167, 55, 55, 1) 0%,
+      rgba(122, 40, 40, 1) 100%
+    );
+  }
+  /* Finalizando estilos del boton */
+
+  /* Iniciando estilos del textfield */
+  .o-textfield {
+    width: 40%;
+    height: 2.5rem;
+    padding: 0 3rem;
+    margin: 20px 0 20px 0;
+    outline: none;
+    border: 2px solid red;
+    border-radius: 25px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-style: italic;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .o-textfield:focus {
+    border: 2px solid black;
+    transition: all 0.4s ease-in-out;
+  }
+  /* Finalizando estilos del textfield */
+
+  /* Estilos del contenedor de la derecha, este contenedor es el que
+  tiene la imagen que se mueve */
+  .o-right-container {
+    display: none;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  /* Inicializando los estilos del header
+  Utilizando display flex para centrar el logo y el slogan */
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
+  }
+
+  /* Estilos del titulo "Tu buscador de heroes" */
+  header h3 {
+    color: white;
+    margin-left: 20px;
+    font-size: 1.5rem;
+  }
+
+  /* Estilos del logo del header */
+  header img {
+    width: 10rem;
+  }
+
+  /* Estilos del contenedor principal, se utiliza display flex y
+  un flex direction column para organizar el header y el contenido*/
+  .o-main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* Estilos del contenedor que contiene la card */
+  .o-panel-container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Estilos de la card */
+  .o-app-container {
+    display: flex;
+    flex-wrap: wrap;
+    background: #eeeeee;
+    margin: 0 0 0 100px;
+    width: 35%;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
+  }
+
+  /* Estilos del titulo de la card */
+  .o-app-title {
+    width: 100%;
+    font-size: 4rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* Estilos de la descripcion que se encuentra en la card */
+  .o-app-description {
+    text-align: justify;
+    font-size: 1.2rem;
+  }
+
+  /* Se crea un contenedor para poder organizar el textfield y el button */
+  .o-action-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Iniciando estilos del boton */
+  .o-button {
+    width: 8rem;
+    height: 3rem;
+    margin: 2rem 0 0 0;
+    background: linear-gradient(
+      180deg,
+      rgba(229, 45, 39, 1) 0%,
+      rgba(179, 18, 23, 1) 100%
+    );
+    color: white;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: italic;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .o-button:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(167, 55, 55, 1) 0%,
+      rgba(122, 40, 40, 1) 100%
+    );
+  }
+
+  /* Finalizando estilos del boton */
+
+  /* Iniciando estilos del textfield */
+  .o-textfield {
+    width: 20%;
+    height: 2.5rem;
+    padding: 0 3rem;
+    margin: 20px 0 20px 0;
+    outline: none;
+    border: 2px solid red;
+    border-radius: 25px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-style: italic;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .o-textfield:focus {
+    border: 2px solid black;
+    transition: all 0.4s ease-in-out;
+  }
+
+  /* Finalizando estilos del textfield */
+
+  /* Estilos del contenedor de la derecha, este contenedor es el que
+  tiene la imagen que se mueve */
+  .o-right-container {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height: 65%;
+  }
+
+  /* Estilos de la imagen */
+  .o-right-container img {
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  /* Inicializando los estilos del header
+  Utilizando display flex para centrar el logo y el slogan */
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
+  }
+
+  /* Estilos del titulo "Tu buscador de heroes" */
+  header h3 {
+    color: white;
+    margin-left: 20px;
+    font-size: 1rem;
+  }
+
+  /* Estilos del logo del header */
+  header img {
+    width: 10rem;
+  }
+
+  /* Estilos del contenedor principal, se utiliza display flex y
+  un flex direction column para organizar el header y el contenido*/
+  .o-main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* Estilos del contenedor que contiene la card */
+  .o-panel-container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Estilos de la card */
+  .o-app-container {
+    display: flex;
+    flex-wrap: wrap;
+    background: #eeeeee;
+    margin: 0 0 0 100px;
+    width: 35%;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 1);
+  }
+
+  /* Estilos del titulo de la card */
+  .o-app-title {
+    width: 100%;
+    font-size: 4rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* Estilos de la descripcion que se encuentra en la card */
+  .o-app-description {
+    text-align: justify;
+    font-size: 1.2rem;
+  }
+
+  /* Se crea un contenedor para poder organizar el textfield y el button */
+  .o-action-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Iniciando estilos del boton */
+  .o-button {
+    width: 8rem;
+    height: 3rem;
+    margin: 2rem 0 0 0;
+    background: linear-gradient(
+      180deg,
+      rgba(229, 45, 39, 1) 0%,
+      rgba(179, 18, 23, 1) 100%
+    );
+    color: white;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: italic;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .o-button:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(167, 55, 55, 1) 0%,
+      rgba(122, 40, 40, 1) 100%
+    );
+  }
+
+  /* Finalizando estilos del boton */
+
+  /* Iniciando estilos del textfield */
+  .o-textfield {
+    width: 20%;
+    height: 2.5rem;
+    padding: 0 3rem;
+    margin: 20px 0 20px 0;
+    outline: none;
+    border: 2px solid red;
+    border-radius: 25px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-style: italic;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .o-textfield:focus {
+    border: 2px solid black;
+    transition: all 0.4s ease-in-out;
+  }
+
+  /* Finalizando estilos del textfield */
+
+  /* Estilos del contenedor de la derecha, este contenedor es el que
+  tiene la imagen que se mueve */
+  .o-right-container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 85%;
+  }
+
+  /* Estilos de la imagen */
+  .o-right-container img {
+    max-width: 100%;
+    height: 100%;
   }
 }
